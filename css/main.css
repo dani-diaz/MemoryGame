@@ -1,0 +1,28 @@
+* { 
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: white;
+
+}
+
+.memory-game {
+    border: 2px solid red;
+}
+
+.memory-card {
+    border: 2px solid blue;
+}
+
+.cardFront, .cardBack {
+    border: 2px solid purple;
+}
+
+
+img {
+    width: 100px;
+}
