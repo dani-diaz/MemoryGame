@@ -1,6 +1,3 @@
-/*----- constants -----*/
-// Each of the "card" objects will be used twice,
-// then shuffled and used for the board's cards
 var SOURCE_CARDS = [
     {img: 'https://i.imgur.com/kozGuFZ.jpg', matched: false},
     {img: 'https://i.imgur.com/Lh4jRp2.jpg', matched: false},
@@ -15,23 +12,23 @@ var SOURCE_CARDS = [
   ];
   const CARD_BACK = 'https://i.imgur.com/YMwcs7S.png'; 
   
-  /*----- app's state (variables) -----*/
-  let cards;  // Array of 16 shuffled card objects
-  let firstCard;  // First card clicked (card object) or null
+ 
+  let cards; 
+  let firstCard;  
   let secondCard;
   let noMatch;
   let ignoreClicks;
   
-  /*----- cached element references -----*/
+  
   const msgEl = document.querySelector('h3');
   
-  /*----- event listeners -----*/
+
   document.querySelector('main').addEventListener('click', handleChoice);
   playAgain.addEventListener('click', init);
-  /*----- functions -----*/
+ 
   init();
   
-  // Initialize all state, then call render()
+  
   function init() {
     cards = getShuffledCards();
     firstCard = null;
@@ -64,7 +61,7 @@ var SOURCE_CARDS = [
     return cards;
   }
   
-  // Update all impacted state, then call render()
+  
   function handleChoice(evt) {
     const cardIdx = parseInt(evt.target.id);
     if (isNaN(cardIdx) || ignoreClicks) return;
