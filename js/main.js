@@ -18,7 +18,8 @@ var SOURCE_CARDS = [
   /*----- app's state (variables) -----*/
   let cards;  // Array of 16 shuffled card objects
   let firstCard;  // First card clicked (card object) or null
-  let numBad;
+  let secondCard;
+  let noMatch;
   let ignoreClicks;
   
   /*----- cached element references -----*/
@@ -34,7 +35,8 @@ var SOURCE_CARDS = [
   function init() {
     cards = getShuffledCards();
     firstCard = null;
-    numBad = 0;
+    secondCard = null;
+    noMatch = 0;
     ignoreClicks = false;
     render();
   }
@@ -42,10 +44,10 @@ var SOURCE_CARDS = [
   function render() {
     cards.forEach(function(card, idx) {
       const imgEl = document.getElementById(idx);
-      const src = (card.matched || card === firstCard) ? card.img : CARD_BACK;
+      const src = (card.matched || card === firstCard || card === secondCard) ? card.img : CARD_BACK;
       imgEl.src = src;
     });
-    msgEl.innerHTML = `Bad Count: ${numBad}`;
+    msgEl.innerHTML = `Bad Count: ${noMatch}`;
   }
   
   function getShuffledCards() {
@@ -68,13 +70,18 @@ var SOURCE_CARDS = [
     if (isNaN(cardIdx) || ignoreClicks) return;
     const card = cards[cardIdx];
     if (firstCard) {
-      if (firstCard.img === card.img) {
-        // correct match
-        firstCard.matched = card.matched = true;
+      if (secondCard) {
+        if (firstCard.img === secondCard.img) {
+          // correct match
+          firstCard.matched = secondCard.matched = true;
+        } else { 
+          noMatch++;
+        } 
+        firstCard = null;
+        secondCard = null;
       } else {
-        numBad++;
-      }
-      firstCard = null;
+          secondCard = card;
+        }   
     } else {
       firstCard = card;
     }
