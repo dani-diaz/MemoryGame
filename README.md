@@ -24,17 +24,24 @@
 
 
  
-# Description
+# ✳️ Description
 
 Memory Games are effective brain training games, as they require you to work the left and right sides of the brain at once. They also reinforce the connections between the brain cells, which improves mental speed and improves short-term memory.
 
 
-# Objective
+# 📌 Objective
 Find all the matching cards to beat the game.
+<details>
+<summary>  🔗 The Game Link </summary>
 
+https://dani-diaz.github.io/MemoryGame
+
+
+</details>
 
 <details>
-<summary>How to Play</summary>
+
+<summary> 📜 How to Play</summary>
 
 🏁 Start the game by flipping a card. 
 
