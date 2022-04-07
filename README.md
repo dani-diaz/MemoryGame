@@ -30,7 +30,7 @@ Memory Games are effective brain training games, as they require you to work the
 
 
 # Objective
-Find all the matching card to beat the game.
+Find all the matching cards to beat the game.
 
 
 <details>
