@@ -11,7 +11,7 @@
 
 
  <h3 align="center">
- by  <a href="https://www.linkedin.com/in/amarpan/"> Daniela Diaz
+ by  <a href="https://www.linkedin.com/in/danidiaz8/"> Daniela Diaz
       </a><br></a> (SEI 321 GA Bootcamp)
  </h3>
  
