@@ -7,7 +7,7 @@ var SOURCE_CARDS = [
     {img: 'https://i.imgur.com/tYGStU6.jpg', matched: false},
     {img: 'https://i.imgur.com/PXT0WdL.jpg', matched: false},
     {img: 'https://i.imgur.com/k5gfso9.jpg', matched: false},
-    {img: 'https://i.imgur.com/1IsAGDl.jpg', matched: false},
+    {img: 'https://i.imgur.com/c8L13Hk.jpg', matched: false},
     {img: 'https://i.imgur.com/WZLyW1b.jpg', matched: false}
   ];
   const CARD_BACK = 'https://i.imgur.com/YMwcs7S.png'; 
